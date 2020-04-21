@@ -22,9 +22,9 @@ A collection of interesting interview type problems and solutions I've been work
 * `./reference_remember.py` - shows one of the annoying issues with Python... optional args sometimes persist!
 * `./exception_ex.py` - simple example of exception handling
 * `./permutations_1.py` - another permutation generator using recursion
-* `./equation_1.py` - O(n^2) version of simple equation solver
+* `./equation_1.py` - O(n<sup>2</sup>) version of simple equation solver
 * `./inheritance_2.py` - demonstrations in class inheretance, multiple inheritance
 * `./object_copy.py` - demonstration of object copying
 * `./t_profile.py` - demonstration of the built-in profiler... Wish I had known about this in my last gig...
-* `./longest_palidrome_substr.py` - given a random string, find the longest palindrome... O(n^2)
+* `./longest_palidrome_substr.py` - given a random string, find the longest palindrome... O(n<sup>2</sup>)
 * `./inheritance.py` - demonstrations in class inheretance
