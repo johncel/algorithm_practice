@@ -38,7 +38,7 @@ class Solution:
            if x+1 < nx and visited[y][x+1] == 0:
                next_visit.append([y,x+1])
 
-            return next_visit
+           return next_visit
 
         def find_path(y,x, A):
             nx = len(A[0])
@@ -46,7 +46,7 @@ class Solution:
             visited = [[0] * len(A[0])] * len(A)
             visited[y][x] = 1
             to_visit = get_next_visit(y, x, ny, nx, visited)
-            flips = 1
+            flips = 0
             while to_visit:
                 next_visit = []
                 for y,x in to_visit:
@@ -58,14 +58,14 @@ class Solution:
                 flips += 1
 
         y,x = find_island(A)
-        flips = find_path(y, x, A):
+        flips = find_path(y, x, A)
         return flips
         print(f'island y,x: {y},{x}')
 
 
 A = [[0,1],[1,0]]
 A = [[0,1,0],[0,0,0],[0,0,1]]
-A = [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
+# A = [[1,1,1,1,1],[1,0,0,0,1],[1,0,1,0,1],[1,0,0,0,1],[1,1,1,1,1]]
 
 sol = Solution()
 flips = sol.shortestBridge(A)
