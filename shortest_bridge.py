@@ -5,29 +5,6 @@ class Solution:
                     
     
     def shortestBridge(self, A) -> int:
-        def find_island(A):
-            nx = len(A[0])
-            ny = len(A)
-            for y, y_row in enumerate(A):
-                for x, val in enumerate(y_row):
-                    # print(f'find island y,x:{y},{x}')
-                    if val == 0:
-                        # print(f'wawa')
-                        continue
-                    if x > 0 and A[y][x-1] != 0:
-                        # print(f'stuff left')
-                        continue
-                    if x < nx - 1 and A[y][x+1] != 0:
-                        # print(f'stuff right')
-                        continue
-                    if y > 0 and A[y-1][x] != 0:
-                        # print(f'stuff up')
-                        continue
-                    if y < ny - 1 and A[y+1][x] != 0:
-                        # print(f'stuff down')
-                        continue
-                    
-                    return y,x
 
         def get_next_visit(y, x, ny, nx, visited, next_visit):
             if y-1 >= 0 and visited[y-1][x] == 0:
@@ -46,14 +23,6 @@ class Solution:
             # print(f'find_path visited:{visited} A:{A}')
             nx = len(A[0])
             ny = len(A)
-            # visited = [[0] * len(A[0])] * len(A)
-            # visited = [[0]*len(A[0]) for _ in range(len(A))]
-            # for y,x in to_visit:
-            #     visited[to_visit] = 1
-            # print(f'visited: {visited} {y},{x}')
-            # visited[y][x] = 1
-            # print(f'visited: {visited}')
-            # to_visit = get_next_visit(y, x, ny, nx, visited)
             # where to go next off this big island
             to_visit = set()
             for y, y_row in enumerate(visited):
